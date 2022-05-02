@@ -93,16 +93,121 @@ h1, h2, h3, h4, h5, h6 {
   width: 100%;
 }
 
+.header .logo {
+  max-height: 80px;
+  max-width: 80px;
+  position: relative;
+  float: left;
+}
+
+.header .logo img {
+  max-width: 100%;
+  display: inline-block;
+}
+
+.header .phones {
+  height: 100%;
+  position: relative;
+  float: right;
+  font-style: bold;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
+.header .phones p {
+  font-size: 30px;
+}
+
 .menu {
   background-color: #292929;
-  height: 100px;
+  height: 70px;
   width: 100%;
 }
 
+.menu .container {
+  padding: 20px 120px;
+}
+
+.menu .container ul {
+  height: 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
+.menu .container ul p {
+  font-size: 20px;
+}
+
+.menu .container ul li {
+  font-size: 20px;
+}
+
 .slider {
+  position: relative;
   background-color: #e49c9c;
   height: 250px;
   width: 100%;
+}
+
+.slider .item {
+  height: 100%;
+  max-width: 75%;
+  overflow: hidden;
+  opacity: 1;
+  margin: 0 auto;
+}
+
+.slider .item img {
+  display: block;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.slider .fade {
+  -webkit-animation: visible 2s;
+          animation: visible 2s;
+}
+
+.slider .prev, .slider .next {
+  font-size: 25px;
+  position: absolute;
+  top: 50%;
+  font-weight: bold;
+  padding: 5px 0px;
+  border: 2px solid rgba(44, 44, 44, 0.2);
+  background-color: rgba(44, 44, 44, 0.2);
+  color: white;
+}
+
+.slider .prev:hover, .slider .next:hover {
+  cursor: pointer;
+}
+
+.slider .prev {
+  padding-right: 9px;
+  border-radius: 0 5px 5px 0;
+}
+
+.slider .next {
+  padding-left: 9px;
+  right: 0;
+  border-radius: 5px 0 0 5px;
 }
 
 .content {
@@ -116,5 +221,34 @@ h1, h2, h3, h4, h5, h6 {
   background-color: black;
   height: 100px;
   width: 100%;
+}
+
+@-webkit-keyframes visible {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1 !important;
+  }
+}
+
+@keyframes visible {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1 !important;
+  }
+}
+
+.d-none {
+  display: none !important;
+}
+
+@media (max-width: 600px) {
+  img {
+    width: inherit;
+    height: 100%;
+  }
 }
 /*# sourceMappingURL=style.css.map */

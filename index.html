@@ -8,29 +8,53 @@
     <title>Document</title>
 </head>
 <body>  
+
     <div class="header">
         <div class="container">
-            <div class="logo"></div>
-            <div class="phones"></div>
+            <div class="logo">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/24/LEGO_logo.svg/1024px-LEGO_logo.svg.png" alt="">
+            </div>
+            <div class="phones">
+                <p>098-500-30-08</p>
+                <p>098-500-30-00</p>
+            </div>
         </div>
     </div>
+
     <div class="menu">
         <div class="container">
-            menu
+            <ul>
+                <a href="https://google.com"><li>Google</li></a>
+                <p>|</p>
+                <a href="https://google.com"><li>Google</li></a>
+                <p>|</p>
+                <a href="https://google.com"><li>Google</li></a>
+                <p>|</p>
+                <a href="https://google.com"><li>Google</li></a>
+                <p>|</p>
+                <a href="https://google.com"><li>Google</li></a>
+            </ul>
         </div>
     </div>
-    <div class="slider">
 
+    <div class="slider">
+        <div class="item fade"><img style="transform: translateY(-300px);" src="https://cdn-apabk.nitrocdn.com/QQUvjmPGpOGmpUxCkqAsSnVUjfEULAuk/assets/static/optimized/rev-994310a/wp-content/uploads/2020/09/Pop-Culture-Trivia-e1609813169562.jpg" alt=""></div>
+        <div class="item fade d-none"><img src="https://img5.goodfon.ru/wallpaper/nbig/7/22/old-zhang-by-old-zhang-venom-lady.jpg" alt=""></div>
+        <span class="prev" onclick="changeImage(-1)">&#12296;</span>
+        <span class="next" onclick="changeImage(1)">&#12297;</span>
     </div>
+
     <div class="content">
         <div class="container">
             content
         </div>
     </div>
+
     <div class="footer">
         <div class="container">
             footer
         </div>
     </div>
+    <script src="js/script.js"></script>
 </body>
 </html>

@@ -32,18 +32,101 @@ h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: 400;}
     background-color: rgb(100, 100, 100);
     height: 100px;
     width: 100%;
+    
+    .logo{
+        max-height: 80px;
+        max-width: 80px;
+        position: relative;
+        float: left;
+        img{
+            max-width: 100%;
+            display: inline-block;
+        }
+    }
+
+    .phones{
+        height: 100%;
+        position: relative;
+        float: right;
+        font-style: bold;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        p{
+            font-size: 30px;
+        }
+    }
 }
 
 .menu{
     background-color: rgb(41, 41, 41);
-    height: 100px;
+    height: 70px;
     width: 100%; 
+    .container{
+        padding: 20px 120px;
+        ul{
+            height: 50px;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-evenly;
+            p{
+                font-size: 20px;
+            }
+            li{
+                font-size: 20px;
+
+            }
+        }
+    }  
 }
 
 .slider{
+    position: relative;
     background-color: rgb(228, 156, 156);
     height: 250px;
     width: 100%; 
+    .item{
+        height: 100%;
+        max-width: 75%;
+        overflow: hidden;     
+        opacity: 1;   
+        margin: 0 auto;
+        
+        img{
+            display: block;
+            width: 100%;
+            margin: 0 auto;
+        }
+    }
+    .fade{
+        animation: visible 2s;
+    }
+
+    .prev, .next{
+        font-size: 25px;
+        position: absolute;
+        top: 50%;
+        font-weight: bold;
+        padding: 5px 0px;
+        border: 2px solid rgba($color: #2c2c2c, $alpha: 0.2);
+        background-color: rgba($color: #2c2c2c, $alpha: 0.2);
+        color: white;
+
+        &:hover{
+            cursor: pointer;
+        }
+    }
+
+    .prev{
+        padding-right: 9px;
+        border-radius: 0 5px 5px 0;
+    }
+
+    .next{
+        padding-left: 9px;
+        right: 0;
+        border-radius: 5px 0 0 5px;
+    }
 }
 
 .content{
@@ -55,4 +138,25 @@ h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: 400;}
     background-color: rgb(0, 0, 0);
     height: 100px;
     width: 100%;
+}
+
+@keyframes 
+visible {
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1 !important;
+    }
+}
+
+.d-none{
+    display: none !important;
+}
+
+@media (max-width: 600px) {
+    img{
+        width: inherit;
+        height: 100%;
+    }
 }

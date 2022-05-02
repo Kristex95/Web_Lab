@@ -1,8 +1,12 @@
 var currentImage = 0;
+var interval = setInterval(()=>{
+	changeImage(1);
+}, 5000);
 
 function changeImage(n){
+	clearInterval(interval);
 	var items = document.getElementsByClassName("item");
-	items[currentImage].setAttribute("class", "item d-none");
+	items[currentImage].classList.add("d-none");
 	currentImage += n;
 	if(currentImage+1 > items.length){
 		currentImage = 0;
@@ -10,9 +14,8 @@ function changeImage(n){
 	else if(currentImage < 0){
 		currentImage = items.length - 1;
 	}
-	items[currentImage].setAttribute("class", "item");
+	items[currentImage].classList.remove("d-none");
+	interval = setInterval(()=>{
+		changeImage(1);
+	}, 5000);
 }
-
-setInterval(function(){
-	changeImage(1);
-}, 5000);
