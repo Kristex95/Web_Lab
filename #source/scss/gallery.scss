@@ -324,6 +324,9 @@ visible {
         .line{
             flex-direction: column;
             justify-content: center;
+            .wide{
+                max-width: 100% !important;
+            }
             .text{
                 margin: 20px 0;
                 width: 100% !important;
