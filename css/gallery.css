@@ -256,19 +256,27 @@ h1, h2, h3, h4, h5, h6 {
   color: #000;
 }
 
-.content .container .group {
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: (minmax(100px, 300px))[3];
-      grid-template-columns: repeat(3, minmax(100px, 300px));
-  row-gap: 3em;
-  -webkit-column-gap: 1em;
-          column-gap: 1em;
+.content .container .group .line {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-bottom: 3em;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
-.content .container .group .text {
+.content .container .group .line .photo {
+  max-width: 600px;
+  max-height: 400px;
+}
+
+.content .container .group .line .text {
   height: 100%;
-  width: 100%;
+  width: 40%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -278,7 +286,7 @@ h1, h2, h3, h4, h5, h6 {
   justify-self: center;
 }
 
-.content .container .group .text span {
+.content .container .group .line .text span {
   display: table-cell;
   font-size: 40pt;
   line-height: 40px;
@@ -288,7 +296,6 @@ h1, h2, h3, h4, h5, h6 {
 
 .content .container .group .photo {
   overflow: hidden;
-  min-width: 100%;
 }
 
 .content .container .group .photo .height {
@@ -299,22 +306,14 @@ h1, h2, h3, h4, h5, h6 {
   width: 100%;
 }
 
-.content .container .group .wide1 {
-  -ms-grid-column: 1;
-      grid-column-start: 1;
-  grid-column-end: 3;
+.content .container .group .tall {
+  max-width: 300px;
+  max-height: 400px;
 }
 
-.content .container .group .wide2 {
-  -ms-grid-column: 2;
-      grid-column-start: 2;
-  grid-column-end: 4;
-}
-
-.content .container .group .full_wide {
-  -ms-grid-column: 1;
-      grid-column-start: 1;
-  grid-column-end: 4;
+.content .container .group .wide {
+  max-width: 400px;
+  max-height: 300px;
 }
 
 .footer {
