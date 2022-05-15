@@ -259,8 +259,8 @@ h1, h2, h3, h4, h5, h6 {
 .content .container .group {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: (1fr)[3];
-      grid-template-columns: repeat(3, 1fr);
+  -ms-grid-columns: (300px)[3];
+      grid-template-columns: repeat(3, 300px);
   row-gap: 3em;
   -webkit-column-gap: 1em;
           column-gap: 1em;
@@ -288,7 +288,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .content .container .group .photo {
   overflow: hidden;
-  max-width: 100%;
+  min-width: 100%;
 }
 
 .content .container .group .photo .height {
