@@ -253,70 +253,44 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .content .container {
-  color: #000;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
 }
 
-.content .container .news {
-  padding: 10px;
-  height: 560px;
-  width: 350px;
-  background-color: #575757;
-  color: white;
+.content .container .ski, .content .container .skates {
+  width: 400px;
 }
 
-.content .container .news .title {
+.content .container .ski .title, .content .container .skates .title {
+  display: block;
+  text-align: center;
   font-size: 24pt;
-  margin-left: 15px;
-  margin-top: 10px;
-  margin-bottom: 10px;
+  margin-bottom: 30px;
 }
 
-.content .container .news ul {
-  height: 450px;
-  margin: 0 0 0 40px;
-}
-
-.content .container .news ul li {
+.content .container .ski .map, .content .container .skates .map {
+  max-width: 100%;
+  max-height: 250px;
+  -webkit-box-shadow: 3px 3px 10px #888;
+          box-shadow: 3px 3px 10px #888;
   margin-bottom: 20px;
 }
 
-.content .container .news ul li p {
-  font-style: italic;
+.content .container .ski .text, .content .container .skates .text {
+  margin-bottom: 10px;
 }
 
-.content .container .news .archive {
-  float: right;
-  margin-right: 5px;
-  bottom: 0;
-  font-size: 16pt;
+.content .container .ski ul, .content .container .skates ul {
+  margin-left: 50px;
+  margin-bottom: 20px;
 }
 
-.content .container .news .archive:hover {
-  text-decoration: underline;
-  cursor: pointer;
-  color: white;
-}
-
-.content .container .news .archive a {
-  color: white;
-}
-
-.content .container .description {
-  margin-left: 16px;
-  height: 560px;
-  width: 580px;
-}
-
-.content .container .description p {
-  font-size: 20pt;
-  text-decoration: underline;
-  margin-bottom: 14px;
+.content .container .ski img, .content .container .skates img {
+  max-width: 100%;
+  margin-bottom: 10px;
 }
 
 .footer {
@@ -446,4 +420,4 @@ h1, h2, h3, h4, h5, h6 {
     display: none;
   }
 }
-/*# sourceMappingURL=index.css.map */
+/*# sourceMappingURL=location.css.map */
